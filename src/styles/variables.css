@@ -1,0 +1,12 @@
+:root {
+  --background: #ffffff;
+  --foreground: #272727;
+  --foreground-dark: #3a3a3a;
+  --gold: #ff8562;
+  --text-gradient-gold: linear-gradient(
+    0.666turn,
+    rgba(149, 121, 91, 1) 0%,
+    rgba(236, 207, 173, 1) 48%,
+    rgba(149, 121, 91, 1) 100%
+  );
+}

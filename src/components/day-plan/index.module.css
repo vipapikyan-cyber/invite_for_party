@@ -1,0 +1,96 @@
+.wrapper {
+  width: 70rem;
+  margin: 5rem auto 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: transparent;
+  background-image: var(--text-gradient-gold);
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 200;
+  line-height: 1.5;
+  font-family: var(--font-tangerine), Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.image {
+  width: 12rem;
+  height: 12rem;
+}
+
+.place_name {
+  color: var(--foreground);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: var(--font-tangerine), Arial, sans-serif;
+}
+
+.time {
+  color: var(--foreground);
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 200;
+  font-family: var(--font-tangerine), Arial, sans-serif;
+}
+
+.place_img {
+  width: 50rem;
+  margin-bottom: 1rem;
+}
+
+.address {
+  color: var(--foreground);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: var(--font-montserrat), Arial, sans-serif;
+}
+
+.dot {
+  color: var(--foreground);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.name {
+  color: rgba(0, 0, 0, 0);
+  background-image: var(--text-gradient-gold);
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 200;
+  line-height: 1.5;
+  font-family: var(--font-tangerine), Arial, sans-serif;
+  -webkit-background-clip: text;
+  margin: 2rem 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.link {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  padding: 1.3rem 2.5rem;
+  border-radius: 2.5rem;
+  background-image: linear-gradient(
+    0.179turn,
+    rgba(204, 184, 164, 1) 0%,
+    rgba(228, 209, 186, 1) 50%,
+    rgba(218, 195, 172, 1) 100%
+  );
+  margin-top: 2rem;
+}

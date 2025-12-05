@@ -1,0 +1,140 @@
+.form {
+  width: 110rem;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5rem 15rem;
+}
+
+.title {
+  color: var(--foreground);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 1.5;
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  -webkit-background-clip: text;
+  margin: 5rem 0;
+}
+
+.radio_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 2rem;
+  cursor: pointer;
+  margin: 3rem 0 0;
+  flex-wrap: wrap;
+}
+
+.radio_label {
+  color: var(--foreground);
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 200;
+  font-family: var(--font-tangerine), Arial, sans-serif;
+}
+
+.radio[type="radio"]:checked,
+.radio[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -999rem;
+}
+.radio[type="radio"]:checked + .radio_label,
+.radio[type="radio"]:not(:checked) + .radio_label {
+  position: relative;
+  padding-left: 2.8rem;
+  cursor: pointer;
+  line-height: 2rem;
+  display: inline-block;
+  color: #666;
+}
+.radio[type="radio"]:checked + .radio_label:before,
+.radio[type="radio"]:not(:checked) + .radio_label:before {
+  content: "";
+  position: absolute;
+  left: -0.3rem;
+  top: -0.3rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+.radio[type="radio"]:checked + .radio_label:after,
+.radio[type="radio"]:not(:checked) + .radio_label:after {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--gold);
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.radio[type="radio"]:not(:checked) + .radio_label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.radio[type="radio"]:checked + .radio_label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.input {
+  width: 100%;
+  color: black;
+  font-size: 2rem;
+  padding: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  background-color: transparent;
+  border: 0 !important;
+  border-bottom: 0.1rem solid black !important;
+  outline: 0 !important;
+  font-family: var(--font-montserrat);
+
+  &::placeholder {
+    color: #7f7f7f;
+  }
+
+  margin: 5rem 0;
+}
+
+.radio_wrapper:nth-last-child(3) > .radio[type="radio"]:checked ~ .input {
+  display: none;
+}
+
+.submit {
+  outline: 0 !important;
+  border: 0.1rem solid var(--foreground);
+  background-color: transparent;
+
+  color: var(--foreground);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: var(--font-tangerine), Arial, sans-serif;
+  margin-top: 5rem;
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.happy_end {
+  color: var(--foreground);
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 200;
+  line-height: 1.5;
+  font-family: var(--font-tangerine), Arial, sans-serif;
+  margin-top: 6rem;
+}

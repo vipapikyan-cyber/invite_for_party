@@ -48,7 +48,7 @@ export function DayPlan() {
       </div>
       <div className={styles.wrapper}>
         <LettersPullUp duration={0.7} className={styles.place_name}>
-          ՏՈՐԹԻ ԱՐԱՐՈՂԹՈՒՅՈՒՆ և DJ Party
+          ՏՈՐԹԻ ԱՐԱՐՈՂՈՒԹՅՈՒՆ և DJ Party
         </LettersPullUp>
         <p className={styles.time}>21:40</p>
       </div>

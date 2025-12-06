@@ -36,7 +36,7 @@ export function Form() {
       <h3 className={styles.title}>
         Խնդրում ենք հաստատել Ձեր ներկայությունը միջոցառմանը
         <br />
-        մինչև 13․12․2025
+        մինչև 10․12․2025
       </h3>
       {/* <div className={styles.radio_wrapper}>
         <input
@@ -104,7 +104,6 @@ export function Form() {
         <img src="/partner3.png" alt="Partner 3" className={styles.partner_logo} />
         <img src="/partner4.png" alt="Partner 4" className={styles.partner_logo} />
         <img src="/partner5.png" alt="Partner 5" className={styles.partner_logo} style={{ 
-          filter: 'brightness(2) contrast(1.5)',
           // backgroundColor: 'rgba(255, 255, 255, 0.4)'
         }}/>
       </div>

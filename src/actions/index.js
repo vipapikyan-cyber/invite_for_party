@@ -11,7 +11,6 @@ const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
 export async function sendEmail({
   nameSurname,
   willCome,
-  numberOfGuests,
 }) {
   const transporter = nodemailer.createTransport({
     secure: true,
@@ -28,7 +27,7 @@ export async function sendEmail({
     to: "Liana.unusyan@radisson.com",
     subject: "Responded to the invite.",
     text: nameSurname,
-    html: `<div>Անուն՝ ${nameSurname} <br>${willCome}<br>${willCome === "Մենք կգանք" ? "` " + numberOfGuests : ""}</div>`,
+    html: `<div>Անուն՝ ${nameSurname} <br>${willCome}<br>}</div>`,
   };
 
   try {

@@ -14,10 +14,7 @@ export function Form() {
     const nameSurname = formData.get("nameSurname") || "";
     const willCome = formData.get("willCome") || "";
 
-    if (
-      !nameSurname ||
-      (willCome === "Ես կգամ")
-    ) {
+    if (!nameSurname) {
       alert("Խնդրում ենք լրացնել բոլոր դաշտերը։");
       return;
     }

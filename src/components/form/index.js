@@ -100,9 +100,9 @@ export function Form() {
       </LettersPullUp>
       <div className={styles.partners_container}>
         <img src="/partner1.png" alt="Partner 1" className={styles.partner_logo} />
+        <img src="/partner4.png" alt="Partner 4" className={styles.partner_logo} />
         <img src="/partner2.png" alt="Partner 2" className={styles.partner_logo} />
         <img src="/partner3.png" alt="Partner 3" className={styles.partner_logo} />
-        <img src="/partner4.png" alt="Partner 4" className={styles.partner_logo} />
         <img src="/partner5.png" alt="Partner 5" className={styles.partner_logo} style={{ 
           // backgroundColor: 'rgba(255, 255, 255, 0.4)'
         }}/>

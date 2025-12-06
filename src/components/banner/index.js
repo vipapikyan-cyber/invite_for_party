@@ -42,9 +42,10 @@ export function Banner() {
       </audio>
       <div />
       <div>
-        <h1 className={`heading ${styles.title}`}>Vahan and Mariam</h1>
-        <figure className={styles.images_block}>
-          <img src={"/b1.jpg"} className={styles.image} alt="They" />
+        <h1 className={`heading ${styles.title}`}>Happy</h1>
+        <h1 className={`heading ${styles.title}`}>New Year</h1>
+        <h1 className={`heading ${styles.title}`}>2026</h1>
+        <figure className={styles.invite_wrapper}>
           <motion.div
             className={styles.container}
             {...slideIn({
@@ -55,14 +56,15 @@ export function Banner() {
               once: true,
             })}
           >
-            <img src={"/banner_2.jpg"} className={styles.image} alt="They" />
           </motion.div>
-          <img src={"/b3.jpg"} className={styles.image} alt="They" />
         </figure>
         <div className={styles.invite_wrapper}>
           <LettersPullUp duration={0.9} className={`text ${styles.invite}`}>
-            հԱՐՍԱՆՅԱՑ ՀՐԱՎԵՐ
+            ԿՈՐՊՈՐԱՏԻՎ ՄԻՋՈՑԱՌՈւՄ
           </LettersPullUp>
+        </div>
+        <div className={styles.image_container}>
+          <img src="/aleg.png" alt="" className={styles.decorative_image} />
         </div>
       </div>
       <FontAwesomeIcon

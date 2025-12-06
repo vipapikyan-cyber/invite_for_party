@@ -27,9 +27,21 @@ export function LettersPullUp({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
+  const gradientStyle = {
+    // display: 'inline-flex',
+    backgroundImage: 'linear-gradient(135deg, #868686 0%, #d0d0d0 25%, #ffffff 50%, #d0d0d0 75%, #868686 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent',
+  };
+
   return (
     <span className={`${styles.wrapper} ${wrapperClassName}`}>
-      <span className={`${styles.container} ${containerClassName}`}>
+      <span 
+        className={`${styles.container} ${containerClassName}`}
+        style={gradientStyle}
+      >
         {splittedText.map((current, i) => (
           <motion.span
             key={i}

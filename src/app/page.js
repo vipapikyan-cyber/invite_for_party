@@ -8,7 +8,7 @@ export default function Home() {
       <main className={styles.page}>
         <Banner />
       </main>
-      <CountdownTimer targetDate={new Date(2025, 7, 20)} />
+      <CountdownTimer targetDate={new Date(2025, 11, 18)} />
       <main className={styles.page}>
         <Reletives />
         <DayPlan />

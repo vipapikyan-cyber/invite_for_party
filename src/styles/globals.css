@@ -8,13 +8,39 @@
 
 html {
   font-size: calc(100vw / (1920 / 10));
+  height: 100%;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   max-width: 100vw;
+  min-height: 100%;
   overflow-x: hidden;
   background-color: var(--background);
   font-family: var(--font-montserrat);
+  background-image: url('/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+
+/* iOS/iPhone fix - repeat the background */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
+  }
+}
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
 }
 
 a {

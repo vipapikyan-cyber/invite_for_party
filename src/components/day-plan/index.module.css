@@ -24,19 +24,48 @@
 }
 
 .place_name {
-  color: var(--foreground);
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.8;
   text-align: center;
-  font-size: 2rem;
-  font-weight: 200;
-  font-family: var(--font-tangerine), Arial, sans-serif;
+  max-width: 1000px;
+  margin: 2rem auto;
+  letter-spacing: 0;
+ }
+
+ .place_name_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.time {
-  color: var(--foreground);
+ .time {
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.8;
   text-align: center;
-  font-size: 4rem;
-  font-weight: 200;
-  font-family: var(--font-tangerine), Arial, sans-serif;
+  max-width: 1000px;
+  margin: 2rem auto;
+  letter-spacing: 0;
+  background: linear-gradient(
+    135deg,
+    #868686 0%,
+    #d0d0d0 25%,
+    #ffffff 50%,
+    #d0d0d0 75%,
+    #868686 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .time {
+    font-size: 3rem;
+  }
 }
 
 .place_img {
@@ -45,11 +74,26 @@
 }
 
 .address {
-  color: var(--foreground);
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 200;
   font-family: var(--font-montserrat), Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  letter-spacing: normal;
+  background: linear-gradient(
+    135deg,
+    #868686 0%,
+    #d0d0d0 25%,
+    #ffffff 50%,
+    #d0d0d0 75%,
+    #868686 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .dot {
@@ -82,15 +126,28 @@
   color: white;
   text-align: center;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 400;
+  line-height: 1.5;
   font-family: var(--font-montserrat), Arial, sans-serif;
-  padding: 1.3rem 2.5rem;
-  border-radius: 2.5rem;
-  background-image: linear-gradient(
-    0.179turn,
-    rgba(204, 184, 164, 1) 0%,
-    rgba(228, 209, 186, 1) 50%,
-    rgba(218, 195, 172, 1) 100%
-  );
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  background: linear-gradient(135deg, #c9b47c, #e8d9b8, #d4b896);
+  border: 0.1rem solid #c0c0c0;
   margin-top: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.link:hover {
+  background: linear-gradient(135deg, #d9ba7c, #f0d9b8, #e4c896);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .place_name {
+    font-size: 3rem;
+    padding: 0;
+    margin: 1rem auto;
+  }
 }

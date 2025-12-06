@@ -49,11 +49,11 @@ export function CountdownTimer({ targetDate }) {
         timeLeft[1].value <= 0 &&
         timeLeft[2].value <= 0 &&
         timeLeft[3].value <= 0) ? (
-        <p className={styles.pass}>մեր հարսանիքի օրն արդեն անցել է</p>
+        <p className={styles.pass}>Միջոցառման օրն արդեն անցել է</p>
       ) : (
         <>
-          <h3 className={styles.title}>20 ՕԳՈՍՏՈՍ 2025</h3>
-          <p className={styles.desc}>մեր հարսանիքին մնացել է</p>
+          <h3 className={styles.title}>18 ԴԵԿՏԵՄԲԵՐԻ 2025</h3>
+          <p className={styles.desc}>Միջոցառմանը մնացել է</p>
           <div className={styles.container}>
             {timeLeft.map((interval, index) => (
               <Fragment key={interval.text}>

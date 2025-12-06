@@ -5,8 +5,10 @@ import nodemailer from "nodemailer";
 const user = process.env.NEXT_PUBLIC_EMAIL_USER_NAME;
 const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
 
+// const user = "lianaunusyan2307@paara.am";
+// const pass = "lbxh kyqj btri wwiu";
+
 export async function sendEmail({
-  invitedBy,
   nameSurname,
   willCome,
   numberOfGuests,
@@ -22,20 +24,18 @@ export async function sendEmail({
   });
 
   const mailData = {
-    from: "'Responded to the invite' <armenmartirosyan020@gmail.com>",
-    to: "vplg2000@mail.ru",
+    from: "'Responded to the invite' <kyokusuinkaykarate@gmail.com>",
+    to: "Liana.unusyan@radisson.com",
     subject: "Responded to the invite.",
     text: nameSurname,
-    html: `<div>Անուն՝ ${nameSurname}<br>Հրավիրված՝ ${invitedBy}ից<br>${willCome}${
-      willCome === "Մենք կգանք" ? "՝ " + numberOfGuests : ""
-    }</div>`,
+    html: `<div>Անուն՝ ${nameSurname} <br>${willCome}<br>${willCome === "Մենք կգանք" ? "` " + numberOfGuests : ""}</div>`,
   };
 
   try {
     await transporter.sendMail(mailData);
   } catch (error) {
     return {
-      message: "Չհաջողվեց պատասխանել հրավերին։ Խնդրում ենք փորձել կրկին։",
+      message: error,
       success: false,
     };
   }

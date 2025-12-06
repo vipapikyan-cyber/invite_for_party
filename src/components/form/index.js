@@ -13,22 +13,18 @@ export function Form() {
     // const invitedBy = formData.get("invitedBy") || "";
     const nameSurname = formData.get("nameSurname") || "";
     const willCome = formData.get("willCome") || "";
-    const numberOfGuests = formData.get("numberOfGuests") || "";
 
     if (
-      // !invitedBy ||
       !nameSurname ||
-      (willCome === "Մենք կգանք" && !numberOfGuests)
+      (willCome === "Ես կգամ")
     ) {
       alert("Խնդրում ենք լրացնել բոլոր դաշտերը։");
       return;
     }
 
     const { message, success } = await sendEmail({
-      // invitedBy,
       nameSurname,
       willCome,
-      numberOfGuests,
     });
 
     if (success) {
@@ -80,12 +76,12 @@ export function Form() {
           type="radio"
           id="willCome"
           name="willCome"
-          value="Մենք կգանք"
+          value="Ես կգամ"
           className={styles.radio}
           defaultChecked
         />
         <label htmlFor="willCome" className={styles.radio_label}>
-          Մենք կգանք
+          Ես կգամ
         </label>
       </div>
       <div className={styles.radio_wrapper}>
@@ -93,18 +89,12 @@ export function Form() {
           type="radio"
           id="cant-come"
           name="willCome"
-          value="Ցավոք չենք կարող ներկա գտնվել ։("
+          value="Ցավոք չեմ կարող ներկա գտնվել ։("
           className={styles.radio}
         />
         <label htmlFor="cant-come" className={styles.radio_label}>
-          Ցավոք չենք կարող ներկա գտնվել ։(
+          Ցավոք չեմ կարող ներկա գտնվել ։(
         </label>
-        <input
-          name="numberOfGuests"
-          type="number"
-          className={styles.input}
-          placeholder="Հյուրերի թիվ"
-        />
       </div>
 
       <Button />

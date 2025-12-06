@@ -5,9 +5,6 @@ import nodemailer from "nodemailer";
 const user = process.env.NEXT_PUBLIC_EMAIL_USER_NAME;
 const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
 
-// const user = "lianaunusyan2307@paara.am";
-// const pass = "lbxh kyqj btri wwiu";
-
 export async function sendEmail({
   nameSurname,
   willCome,
